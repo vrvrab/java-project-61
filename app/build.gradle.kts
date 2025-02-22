@@ -2,6 +2,7 @@ plugins {
     id("java")
     id("com.github.ben-manes.versions") version "0.52.0"
     application
+    checkstyle
 }
 
 group = "hexlet.code"
@@ -26,4 +27,8 @@ application {
 
 tasks.getByName("run", JavaExec::class) {
     standardInput = System.`in`
+}
+
+checkstyle {
+    toolVersion = "10.12.4"
 }
