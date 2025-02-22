@@ -74,6 +74,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.app [checkstyleMain].executor": "Run",
     "Gradle.app [clean installDist].executor": "Run",
     "Gradle.app [run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -86,6 +87,7 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="gradle clean installDist" />
+      <command value="gradle checkstyleMain" />
     </option>
   </component>
   <component name="RunManager" selected="Gradle.app [checkstyleMain]">
