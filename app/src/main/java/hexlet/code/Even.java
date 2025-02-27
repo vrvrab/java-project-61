@@ -3,11 +3,10 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class Even {
-    public static void main() {
+    public static void begin() {
         int counterRightAnswers = 0;
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-
-        do {
+        while (counterRightAnswers <3){
             Scanner scanner = new Scanner(System.in);
             Random rand = new Random();
             int randomNumber = rand.nextInt(100);
@@ -18,6 +17,7 @@ public class Even {
             }
             else rightAnswer = "no";
 
+
             System.out.print("Your answer: ");
             String answer = scanner.next();
             if (randomNumber % 2 == 0 && answer.equalsIgnoreCase("yes")
@@ -25,13 +25,13 @@ public class Even {
                 System.out.println("Correct!");
                 counterRightAnswers++;
             } else {
-                System.out.println("'" + answer + "'" + " is a wrong answer ;(. Correct answer was " + "'" + rightAnswer + "'" +  ".\n" +
-                        "Let's try again, ");
-                System.exit(0);
+                System.out.println("'" + answer + "'" + " is a wrong answer ;(. Correct answer was "
+                        + "'" + rightAnswer + "'.");
+                App.tryAgain();
             }
-        } while (counterRightAnswers <3);
+        }
         if (counterRightAnswers == 3) {
-            App.congratsWinner();
+            App.congratulate();
         }
 
     }
