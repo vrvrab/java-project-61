@@ -5,11 +5,11 @@ import java.util.Scanner;
 
 public class Even {
     private static String rules = "Answer 'yes' if given number is even. Otherwise answer 'no'.";
-    public static String getRules () {
+    public static String getRules() {
         return rules;
     }
 
-    public static String[][] getQandA (int rounds) {
+    public static String[][] getQandA(int rounds) {
         String[][] qAndA = new String[3][3];
         for (int i = 0; i < 3; i++) {
             Scanner scanner = new Scanner(System.in);

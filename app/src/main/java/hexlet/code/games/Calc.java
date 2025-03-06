@@ -5,7 +5,7 @@ import java.util.Random;
 public class Calc {
 
     private static String rules = "What is the result of the expression?";
-    public static String getRules () {
+    public static String getRules() {
         return rules;
     }
 
@@ -16,7 +16,7 @@ public class Calc {
         return operator[randIndex];
     }
 
-    public static String[][] getQandA (int rounds) {
+    public static String[][] getQandA(int rounds) {
         String[][] qAndA = new String[rounds][rounds];
 
         for (int i = 0; i < rounds; i++) {
@@ -37,6 +37,9 @@ public class Calc {
                 case '*':
                     qAndA[i][1] = String.valueOf(randomNumber1 * randomNumber2);
                     break;
+                default:
+                    break;
+
             }
         }
         return qAndA;

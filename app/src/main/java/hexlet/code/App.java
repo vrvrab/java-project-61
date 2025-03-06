@@ -1,11 +1,15 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 import java.util.Scanner;
 
 public class App {
     static Scanner scanner = new Scanner(System.in);
-    private static final int rounds = 3;
+    private static final int ROUNDS = 3;
     public static void main(String[] args) {
 
         System.out.println("Please enter the game number and press Enter.\n"
@@ -26,16 +30,16 @@ public class App {
                 Engine.greet();
                 break;
             case "2":
-                Engine.beginGame(Even.getRules(), Even.getQandA(rounds), rounds);
+                Engine.beginGame(Even.getRules(), Even.getQandA(ROUNDS), ROUNDS);
                 break;
             case "3":
-                Engine.beginGame(Calc.getRules(), Calc.getQandA(rounds), rounds);
+                Engine.beginGame(Calc.getRules(), Calc.getQandA(ROUNDS), ROUNDS);
             case "4":
-                Engine.beginGame(GCD.getRules(), GCD.getQandA(rounds), rounds);
+                Engine.beginGame(GCD.getRules(), GCD.getQandA(ROUNDS), ROUNDS);
             case "5":
-                Engine.beginGame(Progression.getRules(), Progression.getQandA(rounds), rounds);
+                Engine.beginGame(Progression.getRules(), Progression.getQandA(ROUNDS), ROUNDS);
             case "6":
-                Engine.beginGame(Prime.getRules(), Prime.getQandA(rounds), rounds);
+                Engine.beginGame(Prime.getRules(), Prime.getQandA(ROUNDS), ROUNDS);
             default:
                 System.out.println("'" + gameNumber + "' is not a game number. Bye!");
                 break;
