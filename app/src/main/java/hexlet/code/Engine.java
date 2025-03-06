@@ -50,7 +50,7 @@ public class Engine {
             } else {
                 System.out.println("'" + userAnswer + "'" + " is a wrong answer ;(. "
                         + "Correct answer was '" + qAndA[i][1] + "'.");
-                Engine.tryAgain();
+                tryAgain();
             }
         }
         if (counterRightAnswers == rounds) {
