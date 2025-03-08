@@ -3,7 +3,7 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class Calc {
-    final static int MAX_RANDOM_INT = 100;
+    static final int MAX_RANDOM_INT = 100;
 
     private static String rules = "What is the result of the expression?";
     public static String getRules() {

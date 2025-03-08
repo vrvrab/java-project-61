@@ -3,7 +3,7 @@ package hexlet.code.games;
 import java.util.Random;
 
 public class GCD {
-    final static int MAX_RANDOM_INT = 100;
+    static final int MAX_RANDOM_INT = 100;
     public static int getGCD(int a, int b) {
         if (b == 0) {
             return a;
