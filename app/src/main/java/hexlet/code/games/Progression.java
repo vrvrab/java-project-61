@@ -17,7 +17,7 @@ public class Progression {
         String[][] qAndA = new String[rounds][rounds];
         for (int i = 0; i < rounds; i++) {
             Random rand = new Random();
-            int addition = rand.nextInt(MIN_ADDITION_INT, MAX_ADDITION_INT_BOUND;
+            int addition = rand.nextInt(MIN_ADDITION_INT, MAX_ADDITION_INT_BOUND);
             int indexOfHiddenElement = rand.nextInt(MIN_HIDDEN_INDEX, MAX_HIDDEN_INDEX_BOUND);
             int numberOfElementsInRow = 10;
             int current = rand.nextInt(MIN_FIRST_INT, MAX_FIRST_INT_BOUND);
