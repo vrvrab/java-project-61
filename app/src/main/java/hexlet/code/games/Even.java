@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Even {
-    private static String rules = "Answer 'yes' if given number is even. Otherwise answer 'no'.";
+    private static String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     public static String getRules() {
         return rules;
     }
