@@ -22,7 +22,7 @@ public class GCD {
         for (int i = 0; i < rounds; i++) {
             Random rand = new Random();
             int randomNumber1 = rand.nextInt(MAX_RANDOM_INT);
-            int randomNumber2 = rand.nextInt(MAX_RANDOM_INT;
+            int randomNumber2 = rand.nextInt(MAX_RANDOM_INT);
             qAndA[i][0] = String.valueOf(randomNumber1 + " " + randomNumber2);
             qAndA[i][1] = String.valueOf(getGCD(randomNumber1, randomNumber2));
         }
