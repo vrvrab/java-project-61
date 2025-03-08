@@ -10,8 +10,8 @@ public class Even {
     }
 
     public static String[][] getQandA(int rounds) {
-        String[][] qAndA = new String[3][3];
-        for (int i = 0; i < 3; i++) {
+        String[][] qAndA = new String[rounds][rounds];
+        for (int i = 0; i < rounds; i++) {
             Scanner scanner = new Scanner(System.in);
             Random rand = new Random();
             int randomNumber = rand.nextInt(1, 200);

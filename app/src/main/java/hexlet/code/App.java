@@ -8,7 +8,7 @@ import hexlet.code.games.Progression;
 import java.util.Scanner;
 
 public class App {
-    static Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     private static final int ROUNDS = 3;
     public static void main(String[] args) {
 

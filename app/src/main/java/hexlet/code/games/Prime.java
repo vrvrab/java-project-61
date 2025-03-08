@@ -23,8 +23,8 @@ public class Prime {
     }
 
     public static String[][] getQandA(int rounds) {
-        String[][] qAndA = new String[3][3];
-        for (int i = 0; i < 3; i++) {
+        String[][] qAndA = new String[rounds][rounds];
+        for (int i = 0; i < rounds; i++) {
             Random rand = new Random();
             int randomNumber = rand.nextInt(1, 200);
             qAndA[i][0] = String.valueOf(randomNumber);
