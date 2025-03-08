@@ -12,7 +12,7 @@ public class Progression {
         for (int i = 0; i < rounds; i++) {
             Random rand = new Random();
             int addition = rand.nextInt(2, 50);
-            int indexOfHiddenElement = rand.nextInt(0, 10);
+            int indexOfHiddenElement = rand.nextInt(1, 10);
             int numberOfElements = 10;
             int current = rand.nextInt(5, 100);
 
