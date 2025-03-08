@@ -5,7 +5,6 @@ import java.util.Random;
 public class Prime {
     public static final int MIN_RANDOM_INT = 1;
     public static final int MAX_RANDOM_INT = 200;
-    private static String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static boolean isPrime(int n) {
         if (n <= 1) {
@@ -21,7 +20,7 @@ public class Prime {
     }
 
     public static String getRules() {
-        return rules;
+        return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     }
 
     public static String[][] getQandA(int rounds) {

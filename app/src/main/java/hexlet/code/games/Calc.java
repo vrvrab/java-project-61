@@ -5,9 +5,8 @@ import java.util.Random;
 public class Calc {
     static final int MAX_RANDOM_INT = 100;
 
-    private static String rules = "What is the result of the expression?";
     public static String getRules() {
-        return rules;
+        return "What is the result of the expression?";
     }
 
     private static char getRandomOperator() {
@@ -26,7 +25,7 @@ public class Calc {
             int randomNumber1 = rand.nextInt(MAX_RANDOM_INT);
             int randomNumber2 = rand.nextInt(MAX_RANDOM_INT);
             char randomOperator = getRandomOperator();
-            qAndA[i][0] = String.valueOf(randomNumber1 + " " + randomOperator + " " + randomNumber2);
+            qAndA[i][0] = randomNumber1 + " " + randomOperator + " " + randomNumber2;
 
             switch (randomOperator) {
                 case '+':

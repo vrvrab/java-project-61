@@ -8,13 +8,11 @@ public class GCD {
         if (b == 0) {
             return a;
         }
-        int gcd = getGCD(b, a % b);
-        return gcd;
+        return getGCD(b, a % b);
     }
 
-    private static String rules = "Find the greatest common divisor of given numbers.";
     public static String getRules() {
-        return rules;
+        return "Find the greatest common divisor of given numbers.";
     }
 
     public static String[][] getQandA(int rounds) {
@@ -23,7 +21,7 @@ public class GCD {
             Random rand = new Random();
             int randomNumber1 = rand.nextInt(MAX_RANDOM_INT);
             int randomNumber2 = rand.nextInt(MAX_RANDOM_INT);
-            qAndA[i][0] = String.valueOf(randomNumber1 + " " + randomNumber2);
+            qAndA[i][0] = randomNumber1 + " " + randomNumber2;
             qAndA[i][1] = String.valueOf(getGCD(randomNumber1, randomNumber2));
         }
         return qAndA;

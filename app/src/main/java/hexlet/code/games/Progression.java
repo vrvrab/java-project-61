@@ -9,10 +9,11 @@ public class Progression {
     public static final int MAX_ADDITION_INT_BOUND = 50;
     public static final int MIN_HIDDEN_INDEX = 1;
     public static final int MAX_HIDDEN_INDEX_BOUND = 200;
-    private static String rules = "What number is missing in the progression?";
+
     public static String getRules() {
-        return rules;
+        return "What number is missing in the progression?";
     }
+
     public static String[][] getQandA(int rounds) {
         String[][] qAndA = new String[rounds][rounds];
         for (int i = 0; i < rounds; i++) {
