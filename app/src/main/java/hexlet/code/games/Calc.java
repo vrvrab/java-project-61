@@ -5,11 +5,10 @@ import hexlet.code.Utils;
 
 public class Calc {
     static final int MAX_RANDOM_INT = 100;
-    private static final int ROUNDS = 3;
     public static final String RULES = "What is the result of the expression?";
 
     public static void start() {
-        Engine.beginGame(RULES, ROUNDS, getQandA(ROUNDS));
+        Engine.beginGame(RULES, getQandA(Engine.ROUNDS));
     }
 
     private static char getRandomOperator() {
@@ -20,9 +19,7 @@ public class Calc {
 
     public static String[][] getQandA(int rounds) {
         String[][] qAndA = new String[rounds][rounds];
-
         for (int i = 0; i < rounds; i++) {
-
             int randomNumber1 = Utils.randomIntGenerator(MAX_RANDOM_INT);
             int randomNumber2 = Utils.randomIntGenerator(MAX_RANDOM_INT);
             char randomOperator = getRandomOperator();

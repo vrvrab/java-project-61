@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Engine {
     private static String name = "";
-
-    public static void beginGame(String rules, int rounds, String[][] questionsAndAnswers) {
+    public static final int ROUNDS = 3;
+    public static void beginGame(String rules, String[][] questionsAndAnswers) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\nWelcome to the Brain Games!");
         System.out.print("May I have your name? ");
@@ -14,7 +14,7 @@ public class Engine {
         System.out.println(rules);
         int counterRightAnswers = 0;
 
-        for (int i = 0; counterRightAnswers < rounds; i++) {
+        for (int i = 0; counterRightAnswers < ROUNDS; i++) {
             System.out.println("Question: " + questionsAndAnswers[i][0]);
             System.out.print("Your answer: ");
             String userAnswer = scanner.next();
@@ -30,7 +30,7 @@ public class Engine {
                 System.exit(0);
             }
         }
-        if (counterRightAnswers == rounds) {
+        if (counterRightAnswers == ROUNDS) {
             System.out.println("Congratulations, " + name + "!");
             System.exit(0);
         }

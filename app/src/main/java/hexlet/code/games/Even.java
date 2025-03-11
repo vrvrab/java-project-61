@@ -4,13 +4,12 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Even {
-    private static final int ROUNDS = 3;
     public static final int MIN_RANDOM_INT = 1;
     public static final int MAX_RANDOM_INT = 200;
     public static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static void start() {
-        Engine.beginGame(RULES, ROUNDS, getQandA(ROUNDS));
+        Engine.beginGame(RULES, getQandA(Engine.ROUNDS));
     }
 
     public static String[][] getQandA(int rounds) {

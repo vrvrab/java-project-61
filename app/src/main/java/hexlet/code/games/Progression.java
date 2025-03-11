@@ -10,11 +10,11 @@ public class Progression {
     public static final int MAX_ADDITION_INT_BOUND = 50;
     public static final int MIN_HIDDEN_INDEX = 1;
     public static final int NUMBER_OF_ITEMS_IN_QUESTION = 10;
-    private static final int ROUNDS = 3;
     public static final String RULES = "What number is missing in the progression?";
 
     public static void start() {
-        Engine.beginGame(RULES, ROUNDS, getQandA(ROUNDS));    }
+        Engine.beginGame(RULES, getQandA(Engine.ROUNDS));
+    }
 
     public static String[][] getQandA(int rounds) {
         String[][] qAndA = new String[rounds][rounds];
