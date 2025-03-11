@@ -30,17 +30,20 @@ public class Calc {
     }
 
     private static String getRightAnswer(int n1, int n2, char operator) {
-        String rAnswer = "";
+        String result = "";
         switch (operator) {
             case '+':
-                rAnswer = "" + (n1 + n2);
+                result = "" + (n1 + n2);
+                break;
             case '-':
-                rAnswer = "" + (n1 - n2);
+                result = "" + (n1 - n2);
+                break;
             case '*':
-                rAnswer = "" + (n1 * n2);
+                result = "" + (n1 * n2);
+                break;
             default:
                 break;
         }
-        return rAnswer;
+        return result;
     }
 }
