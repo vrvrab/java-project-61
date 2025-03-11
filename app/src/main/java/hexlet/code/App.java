@@ -8,7 +8,6 @@ import hexlet.code.games.Progression;
 import java.util.Scanner;
 
 public class App {
-    private static final int ROUNDS = 3;
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.\n"
@@ -26,19 +25,19 @@ public class App {
             case "0":
                 System.exit(0);
             case "1":
-                Engine.greet();
+                Cli.greet();
                 break;
             case "2":
-                Engine.beginGame(Even.getRules(), Even.getQandA(ROUNDS), ROUNDS);
+                Even.start();
                 break;
             case "3":
-                Engine.beginGame(Calc.getRules(), Calc.getQandA(ROUNDS), ROUNDS);
+                Calc.start();
             case "4":
-                Engine.beginGame(GCD.getRules(), GCD.getQandA(ROUNDS), ROUNDS);
+                GCD.start();
             case "5":
-                Engine.beginGame(Progression.getRules(), Progression.getQandA(ROUNDS), ROUNDS);
+                Progression.start();
             case "6":
-                Engine.beginGame(Prime.getRules(), Prime.getQandA(ROUNDS), ROUNDS);
+                Prime.start();
             default:
                 System.out.println("'" + gameNumber + "' is not a game number. Bye!");
                 break;

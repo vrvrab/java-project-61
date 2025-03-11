@@ -1,18 +1,20 @@
 package hexlet.code.games;
 
-import java.util.Random;
+import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Calc {
     static final int MAX_RANDOM_INT = 100;
+    private static final int ROUNDS = 3;
+    public static final String RULES = "What is the result of the expression?";
 
-    public static String getRules() {
-        return "What is the result of the expression?";
+    public static void start() {
+        Engine.beginGame(RULES, ROUNDS, getQandA(ROUNDS));
     }
 
     private static char getRandomOperator() {
         char[] operator = {'+', '-', '*'};
-        Random rand = new Random();
-        int randIndex = rand.nextInt(operator.length);
+        int randIndex = Utils.randomIntGenerator(operator.length);
         return operator[randIndex];
     }
 
@@ -21,27 +23,27 @@ public class Calc {
 
         for (int i = 0; i < rounds; i++) {
 
-            Random rand = new Random();
-            int randomNumber1 = rand.nextInt(MAX_RANDOM_INT);
-            int randomNumber2 = rand.nextInt(MAX_RANDOM_INT);
+            int randomNumber1 = Utils.randomIntGenerator(MAX_RANDOM_INT);
+            int randomNumber2 = Utils.randomIntGenerator(MAX_RANDOM_INT);
             char randomOperator = getRandomOperator();
             qAndA[i][0] = randomNumber1 + " " + randomOperator + " " + randomNumber2;
-
-            switch (randomOperator) {
-                case '+':
-                    qAndA[i][1] = String.valueOf(randomNumber1 + randomNumber2);
-                    break;
-                case '-':
-                    qAndA[i][1] = String.valueOf(randomNumber1 - randomNumber2);
-                    break;
-                case '*':
-                    qAndA[i][1] = String.valueOf(randomNumber1 * randomNumber2);
-                    break;
-                default:
-                    break;
-
-            }
+            qAndA[i][1] = getRightAnswer(randomNumber1, randomNumber2, randomOperator);
         }
         return qAndA;
+    }
+
+    private static String getRightAnswer(int n1, int n2, char operator) {
+        String rAnswer = "";
+        switch (operator) {
+            case '+':
+                rAnswer = "" + (n1 + n2);
+            case '-':
+                rAnswer = "" + (n1 - n2);
+            case '*':
+                rAnswer = "" + (n1 * n2);
+            default:
+                break;
+        }
+        return rAnswer;
     }
 }

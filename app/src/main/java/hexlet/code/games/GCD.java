@@ -1,9 +1,17 @@
 package hexlet.code.games;
 
-import java.util.Random;
+import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class GCD {
     static final int MAX_RANDOM_INT = 100;
+    private static final int ROUNDS = 3;
+    public static final String RULES = "Find the greatest common divisor of given numbers.";
+
+    public static void start() {
+        Engine.beginGame(RULES, ROUNDS, getQandA(ROUNDS));
+    }
+
     public static int getGCD(int a, int b) {
         if (b == 0) {
             return a;
@@ -11,16 +19,11 @@ public class GCD {
         return getGCD(b, a % b);
     }
 
-    public static String getRules() {
-        return "Find the greatest common divisor of given numbers.";
-    }
-
     public static String[][] getQandA(int rounds) {
         String[][] qAndA = new String[rounds][rounds];
         for (int i = 0; i < rounds; i++) {
-            Random rand = new Random();
-            int randomNumber1 = rand.nextInt(MAX_RANDOM_INT);
-            int randomNumber2 = rand.nextInt(MAX_RANDOM_INT);
+            int randomNumber1 = Utils.randomIntGenerator(MAX_RANDOM_INT);
+            int randomNumber2 = Utils.randomIntGenerator(MAX_RANDOM_INT);
             qAndA[i][0] = randomNumber1 + " " + randomNumber2;
             qAndA[i][1] = String.valueOf(getGCD(randomNumber1, randomNumber2));
         }
