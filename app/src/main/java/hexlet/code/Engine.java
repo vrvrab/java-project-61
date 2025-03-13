@@ -30,10 +30,8 @@ public class Engine {
                 System.exit(0);
             }
         }
-        if (counterRightAnswers == ROUNDS) {
-            System.out.println("Congratulations, " + name + "!");
-            System.exit(0);
-        }
+        System.out.println("Congratulations, " + name + "!");
+        System.exit(0);
     }
 
 }

@@ -24,22 +24,22 @@ public class Calc {
             int randomNumber2 = Utils.randomIntGenerator(MAX_RANDOM_INT);
             char randomOperator = getRandomOperator();
             qAndA[i][0] = randomNumber1 + " " + randomOperator + " " + randomNumber2;
-            qAndA[i][1] = getRightAnswer(randomNumber1, randomNumber2, randomOperator);
+            qAndA[i][1] = String.valueOf(getRightAnswer(randomNumber1, randomNumber2, randomOperator));
         }
         return qAndA;
     }
 
-    private static String getRightAnswer(int n1, int n2, char operator) {
-        String result = "";
+    private static int getRightAnswer(int n1, int n2, char operator) {
+        int result = 0;
         switch (operator) {
             case '+':
-                result = "" + (n1 + n2);
+                result = n1 + n2;
                 break;
             case '-':
-                result = "" + (n1 - n2);
+                result = n1 - n2;
                 break;
             case '*':
-                result = "" + (n1 * n2);
+                result = n1 * n2;
                 break;
             default:
                 break;
